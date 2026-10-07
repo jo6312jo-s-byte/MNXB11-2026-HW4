@@ -5,6 +5,8 @@
 
 #include "as1.hpp"
 #include "as2.hpp"
+#include "as3.hpp"
+
 #include <iostream>
 
 int main() { 
@@ -55,6 +57,22 @@ int main() {
   if (v1+v2==v3) {
     std::cout << 1 << std::endl;
   }
+
+  std::cout << "------------- Assignment 3 -------------" << std::endl;
+  std::cout << "Should output pear, green (1), fruit is good, apple, red (0), sweet" << std::endl;
+  homework::Fruit fruit{"pear", homework::Color::green};
+  std::cout << fruit.getName() << std::endl;
+  if (fruit.getColor() == homework::Color::green) {
+    std::cout << "green" << std::endl;
+  }
+  std::cout << fruit.getTaste() << std::endl;
+  
+  homework::Apple apple{homework::Color::red};
+  std::cout << apple.getName() << std::endl;
+  if (apple.getColor() == homework::Color::red) {
+    std::cout << "red" << std::endl;
+  }
+  std::cout << apple.getTaste() << std::endl;
 
 
   return 0;
