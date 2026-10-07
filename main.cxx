@@ -4,6 +4,7 @@
  * */
 
 #include "as1.hpp"
+#include "as2.hpp"
 #include <iostream>
 
 int main() { 
@@ -35,6 +36,25 @@ int main() {
   std::cout << homework::factorial(d) << std::endl;
 
   std::cout << "------------- Assignment 2 -------------" << std::endl;
+
+  // as2.1
+  std::cout << "Test as2.1, should give output 42, 3.14, 2.71, and (1.0, 2.0, 3.0) " << std::endl;
+  homework::Foo foo;
+  std::cout << foo.bar() << std::endl;
+  std::cout << foo.baz() << std::endl;
+  std::cout << foo.x << std::endl;
+  for (double i: foo.quux()) {
+    std::cout << i << " " << std::endl;
+  }
+
+  // as2.2
+  std::cout << "Test as2.2, should output true (1)" << std::endl;
+  homework::fVector2D v1{2.0,2.5};
+  homework::fVector2D v2{2.0,2.5};
+  homework::fVector2D v3{4.0,5.0};
+  if (v1+v2==v3) {
+    std::cout << 1 << std::endl;
+  }
 
 
   return 0;
